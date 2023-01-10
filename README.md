@@ -64,13 +64,21 @@ Next.js Commerce integrates out-of-the-box with BigCommerce, Shopify, Swell, Sal
 
 Open `site/.env.local` and change the value of `COMMERCE_PROVIDER` to the provider you would like to use, then set the environment variables for that provider (use `site/.env.template` as the base).
 
-The setup for Shopify would look like this for example:
+The setup for OrderCloud would look like this for example:
 
+```bash
+COMMERCE_PROVIDER=@vercel/commerce-ordercloud
+ORDERCLOUD_BUYER_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ORDERCLOUD_CLIENT_SECRET= # This will be blank as buyer api client in OC does NOT have a secret
+STRIPE_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxx # used a test stripe dev account to generate this value for this project
 ```
-COMMERCE_PROVIDER=@vercel/commerce-shopify
-NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN=xxxxxxx.myshopify.com
-```
+** NOTE ** ensure that OC marketplace is setup accordingly in order to connect to this project.
+1. Buyer and Middleware API clients
+2. Create Default Buyer and Buyer User
+3. Create Default Admin User
+4. Create and Assign Security Profiles for Buyer and Admin
+5. Assign Default Context User to each API client
+
 
 ### Features
 
