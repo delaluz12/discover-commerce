@@ -27,6 +27,12 @@ pnpm install & pnpm build # run these commands in the root folder of the mono re
 pnpm dev # run this command in the site folder
 ```
 
+NOTE: must install pnpm package manager before running above commands
+```bash
+npm install -g pnpm # when using npm
+brew install pnpm # used this when installing on Mac laptop
+```
+
 > If you encounter any problems while installing and running for the first time, please see the Troubleshoot section
 
 ## Features
